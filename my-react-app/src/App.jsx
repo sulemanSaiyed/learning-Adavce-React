@@ -1,10 +1,11 @@
 import UserGreetinng from "./UserGreeting";
+import "./index.css";
 
 function App() {
   
   return(
     <> 
-<UserGreetinng isLoggedIn={false} userName="Denzil"/>
+<UserGreetinng isLoggedIn={true} userName="Denzil"/>
 </>
   );
 }

@@ -1,10 +1,19 @@
-.student{
+.welcome-messsage{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
   padding: 10px;
-  border: 1px solid hsl(0, 0%, 50%, 0.8);
+  color: rgb(132, 8, 8);
+  background-color: aqua;
+  border: 1px solid green;
+  border-radius: 5px;
 }
 
-.student p{
-  margin: 0;
+.plz-login{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  padding: 10px;
+  color: white;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 5px;
 }
