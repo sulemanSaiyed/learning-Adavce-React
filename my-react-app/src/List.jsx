@@ -1,12 +1,20 @@
 function List(){
 
   const fruit=
-  [{name:"apple",cal:45},
-    {name:"loda",cal:45},
-    {name:"pandu", cal:45} ];
-const listItems=fruit.map(fruit=> <li key={fruit.name}>{fruit.name}</li>)
+  [{id:1,name:"apple",cal:45},
+    {id:2,name:"loda",cal:95},
+    {id:3,name:"pandu", cal:15} ];
 
-  return(<ul>{listItems}</ul>);
+   // fruit.sort((a,b)=>a.name.localeCompare(b.name));// alphabtical
+  // fruit.sort((a,b)=>b.name.localeCompare(a.name));  reverse
+  // fruit.sort((a,b)=>a.cal-b.cal);
+
+const  lawCalfruit=fruit.filter(fruits=> fruits.cal<20)
+
+const listItems= lawCalfruit.map( lawCalfruits=> <li key={ lawCalfruits.id}>
+  { lawCalfruits.name}:&nbsp;<b>{ lawCalfruits.cal}</b></li>)
+
+  return(<ol>{listItems}</ol>);
 
 
 
