@@ -1,23 +1,26 @@
-function List(){
+import PropTypes from "prop-types";
+function List(props){
 
-  const fruit=
-  [{id:1,name:"apple",cal:45},
-    {id:2,name:"loda",cal:95},
-    {id:3,name:"pandu", cal:15} ];
 
-   // fruit.sort((a,b)=>a.name.localeCompare(b.name));// alphabtical
-  // fruit.sort((a,b)=>b.name.localeCompare(a.name));  reverse
-  // fruit.sort((a,b)=>a.cal-b.cal);
 
-const  lawCalfruit=fruit.filter(fruits=> fruits.cal<20)
+const itemList=props.items;
 
-const listItems= lawCalfruit.map( lawCalfruits=> <li key={ lawCalfruits.id}>
-  { lawCalfruits.name}:&nbsp;<b>{ lawCalfruits.cal}</b></li>)
+const listItems= itemList.map( itemLists=> <li key={ itemLists.id}>
+  { itemLists.name}:&nbsp;<b>{ itemLists.cal}</b></li>)
 
-  return(<ol>{listItems}</ol>);
+  return(<><h3 >{props.cat}</h3>
+          <ol >{listItems}</ol></>);
 
 
 
 }
 
+List.protoTypes={
+  cat:PropTypes.string,
+  items:PropTypes.arrayOf(PropTypes.shape({id:PropTypes.number, name:PropTypes.string, cal:PropTypes.number}))
+}
+List.defaultProps={
+  cat:"Category",
+  items:[],
+}
 export default List
