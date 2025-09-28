@@ -1,11 +1,10 @@
 
-import Buttons from "./Buttons";
-import button from "./Buttons";
+import MyComponent from "./MyComponent";
 function App() {
  
   return(
   <>
- <Buttons/>
+<MyComponent/>
   </>
 
 
