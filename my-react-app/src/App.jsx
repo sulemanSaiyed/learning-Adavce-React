@@ -1,9 +1,9 @@
-import ColorPicker from "./ColorPicker"
+import MyComponnet from "./MyComponnet"
 function App() {
  
   return(
   <>
-   <ColorPicker/>
+   <MyComponnet/>
 </>
  
 
