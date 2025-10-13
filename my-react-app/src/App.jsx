@@ -1,9 +1,10 @@
-import MyComponnet from "./MyComponnet"
+
+import TodoList from "./TodoList";
 function App() {
  
   return(
   <>
-   <MyComponnet/>
+   <TodoList/>
 </>
  
 
