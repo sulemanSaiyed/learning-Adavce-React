@@ -3,37 +3,35 @@ import React,{useState, useEffect} from "react";
 
 function MyComponent(){
 
+  const [width, setWidhth] =useState(window.innerWidth);
+  const [height, setHeight] =useState(window.innerHeight);
 
-  const[count, setCount]=useState(0);
-  
-  const[col, setColor]=useState("green");
 
-  useEffect(()=>{
-    console.log('effect run', count, col); 
-document.title=`count:${count} ${col}`;
-  },[count, col])
 
-function addCount(){
+useEffect(()=>  
+ { window.addEventListener("resize", handleResize);
+console.log("e added")
 
-setCount(c=>c+1)
-
+return()=>{
+  window.removeEventListener("resize", handleResize);
+  console.log("e removed")
 }
-function subCount(){
+}, []);
 
-  setCount(c=>c-1)
-  
-  }
+useEffect(()=>{
+  document.title=`size: ${width}x${height} `;
+},[width,height])
 
-  function changeColor(){
-    setColor(c=>c==="green"?"red":"green")
-  }
+function handleResize(){
+  setWidhth(window.innerWidth);
+  setHeight(window.innerHeight)
+}
 
   return(<>
 
-  <p style={{color:col}}>Count:{count}</p>
-  <button onClick={addCount}>ADD</button>
-  <button onClick={subCount}>SUb</button><br />
-  <button onClick={changeColor}>Change Color</button>
+  <p>Window width:{width}px</p>
+  
+  <p>Window Height:{height}px</p>
   </>)
 }
 export default MyComponent;
