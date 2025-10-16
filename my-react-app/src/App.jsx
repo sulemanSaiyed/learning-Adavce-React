@@ -1,9 +1,9 @@
-import ComponenetA from "./ComponenetA";
+import Stopwatch from "./Stopwatch";
 function App() {
  
   return(
   <>
-   <ComponenetA/>
+   <Stopwatch/>
 </>
  
 
