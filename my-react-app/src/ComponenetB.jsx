@@ -1,13 +1,13 @@
 
 import ComponenetC from "./ComponenetC";
 
-function ComponenetB(props){
+function ComponenetB(){
 
 
 return(
 <div className="box">
 <h1>ComponeentB</h1>
-<ComponenetC user={props.user}/>
+<ComponenetC />
 </div>)
 }
 export default ComponenetB;
